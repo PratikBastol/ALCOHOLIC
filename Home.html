@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Drinksy</title>
+        <link rel="stylesheet" href="css/Home.css">
+        <link rel="stylesheet" href="css/flash.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap"
+            rel="stylesheet">
+
+    </head>
+    <body>
+        <nav class="top-container">
+            <div class="click-btn"><i id="openSidebar"
+                    class="fa-solid fa-bars"></i></div>
+            <div class="logo"><a href="Home.html"><img src="img/logo.png"
+                        alt></a></div>
+            <div class="nav-second">
+                <div class="bigscreennav">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>01-471014</span>
+
+                </div>
+                <div class="search-bar" id="searchingbar">
+
+                    <div class="category-select">
+                        <select id="categorySelect">
+                            <option value="all">All Categories</option>
+                            <option value="beer">Beer</option>
+                            <option value="whisky">Whisky</option>
+                            <option value="wine">Wine</option>
+                        </select>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <input type="text" id="searchInput"
+                        placeholder="Search for products">
+
+                    <div id="searchDropdown" class="search-dropdown"></div>
+
+                </div>
+            </div>
+            <div class="header-right">
+                <i id="searchbtnglass" class="fa-solid fa-magnifying-glass"></i>
+
+                <a href="Cart.html">
+                    <div class="cartimg">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span id="cartcount">0</span>
+                    </div>
+                </a>
+                <span id="navbarUser">Login</span>
+                <button id="logoutBtn" style="display:none;">Logout</button>
+
+            </div>
+
+        </nav>
+        <div id="divbelowsearch" class="divbelowsearch">
+
+            <ul><div class="belowsearchline"></div>
+                <li><a href="Home.html">Home</a> </li>
+                <li><a href="Shop.html">Shop</a></li>
+                <li><a href="flash.html">Flash Sale Item</a></li>
+                <li><a href="Aboutus.html">About Us</a></li>
+                <li><a href="Account.html">My account</a></li>
+                <div class="belowsearchline"></div>
+            </ul>
+
+        </div>
+        <div id="productsContainer"></div>
+        <div id="btn-nav" class="btnsidebar">
+            <div class="sidebarcross">
+                <img src="img/logo.png" alt>
+                <button id="closeSidebar">x</button>
+            </div>
+            <ul>
+                <li><a href="Home.html">Home</a> </li>
+                <li><a href="Shop.html">Shop</a></li>
+                <li><a href="flash.html">Flash Sale Item</a></li>
+                <li><a href="Aboutus.html">About Us</a></li>
+                <li><a href="Account.html">My account</a></li>
+
+            </ul>
+            <hr>
+
+        </div>
+
+        <div class="after-nav">
+            <div class="after-nav1">
+                <span class="span1">Premium Selection</span>
+                <h1>Elevate Your Every <span>Moment</span></h1>
+                <p>Discover a curated collection of fine wines,whiskys and
+                    spirits from around the world.</p>
+                <button class="after-nav1-btn"><a href="Shop.html">Shop Now <i
+                            class="fa-solid fa-arrow-right"
+                            style="font-size: small;"></i></a>
+                </button>
+            </div>
+
+        </div>
+        <section class="flash-sale" id="text">
+
+            <h1>Flash Sale Items</h1>
+        </section>
+        <div class="forproductsandbtn">
+            <div id="flashGrid" class="flash-grid">
+
+            </div>
+            <div class="testing-div">
+
+                <button id="btn-left2"><</button>
+                <button id="btn-right2">></button>
+            </div>
+        </div>
+
+        <section class="home-details">
+            <div class="homedetails-heading">
+                <h2>Browse by category</h2>
+            </div>
+            <div class="cat-div">
+                <div class="cat-1"><img src="img/Beer.jpg" alt> <span
+                        class="title">Beer</span>
+                    <span class="hover-text"><button class="after-nav1-btn"><a
+                                href="Shop.html#sectionbeer">Shop
+                                Now</a>
+                        </button></span></div>
+                <div class="cat-2"><img src="img/Whiskyy.png" alt> <span
+                        class="title">Whisky</span>
+                    <span class="hover-text"><button class="after-nav1-btn"><a
+                                href="Shop.html#sectionwhisky">Shop
+                                Now</a>
+                        </button></span></div>
+
+                <div class="cat-3"><img src="img/Wine.jpeg" alt> <span
+                        class="title">Wine</span>
+                    <span class="hover-text"><button class="after-nav1-btn"><a
+                                href="Shop.html#sectionwine">Shop
+                                Now</a>
+                        </button></span></div>
+            </div>
+
+        </section>
+
+        <div class="discount-div">
+            <div class="discountdiv-left">
+                <span>Special Offer</span>
+                <h1>Up to <span>20%</span> OFF</h1>
+                <p>On Selected Premium Brands</p>
+                <button class="after-nav1-btn"><a href="Flash.html">Explore
+                        Offers <i
+                            class="fa-solid fa-arrow-right"
+                            style="font-size: small;"></i></a>
+                </button>
+
+            </div>
+            <div class="discountdiv-right">
+                <img src="Img/discount.jpg" alt>
+            </div>
+
+        </div>
+
+        <section class="just-for-you">
+            <div class="container">
+                <h2 class="section-title">Just For You</h2>
+                <p class="section-subtitle">Handpicked selections based on your
+                    taste</p>
+
+            </div>
+            <div class="filter">
+                <button id="filter" class="filter-btn">
+                    <i class="fa-solid fa-sliders"></i>
+                    Filter
+                </button>
+                <div id="filterdropdown" class="filter-dropdown">
+                    <p id="low">Low to High</p>
+                    <p id="high">High to Low</p>
+                    <p id="az"> A to Z</p>
+                    <p id="za">Z to A</p>
+
+                </div>
+            </div>
+
+        </section>
+        <div class="forproductsandbtn">
+            <article id="productsGrid">
+
+            </article>
+            <div class="testing-div">
+
+                <button id="btn-left"><</button>
+                <button id="btn-right">></button>
+            </div>
+        </div>
+        <div id="cartMessage">Product added to cart!</div>
+
+        <footer class="footer">
+            <div class="footer-1">
+
+                <span>Shop</span>
+                <ul class="footer-links">
+                    <li><a href="#">All Products</a></li>
+                    <li><a href="#">Whiskey</a></li>
+                    <li><a href="#">Wine</a></li>
+                    <li><a href="#">Beer</a></li>
+                    <li><a href="#">Vodka</a></li>
+                    <li><a href="#">Gin</a></li>
+                    <li><a href="#">Rum</a></li>
+                    <li><a href="#">Offers & Deals</a></li>
+                </ul>
+            </div>
+            <hr>
+
+            <div class="footer-2">
+                <span>Customer Service</span>
+                <ul class="footer-links">
+                    <li><a href="#">My Account</a></li>
+                    <li><a href="#">Order Tracking</a></li>
+                    <li><a href="#">Shipping&Delivery</a></li>
+                    <li><a href="#">Returns&Refunds</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <hr>
+            <div class="footer-3">
+                <span>Company</span>
+                <ul class="footer-links">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms&Conditions</a></li>
+                </ul>
+            </div>
+
+        </footer>
+
+        <hr>
+        <span class="span-last">@2024 Drinksy.All Rights Reserved.</span>
+        <script src="js/product.js"></script>
+        <script src="js/navbar.js"></script>
+
+        <script src="js/addtocart.js"></script>
+        <script src="js/Home.js"></script>
+        <script src="js/flashitem.js"></script>
+
+    </body>
+</html>

@@ -1,0 +1,124 @@
+// Get user from localStorage
+let loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+
+let navbarUser = document.getElementById("navbarUser");
+let logoutBtn = document.getElementById("logoutBtn");
+
+if (loggedInUser) {
+  navbarUser.innerText = loggedInUser.firstname;
+  logoutBtn.style.display = "inline-block";
+} else {
+  navbarUser.innerText = "Login";
+  logoutBtn.style.display = "none";
+}
+
+logoutBtn.addEventListener("click", function () {
+  localStorage.removeItem("loggedInUser");
+
+  alert("Logged out successfully");
+
+  navbarUser.innerText = "Login";
+  logoutBtn.style.display = "none";
+
+  window.location.href = "Home.html";
+});
+
+//signup ko reference
+
+let signupForm = document.getElementById("signupForm");
+signupForm.addEventListener("submit", function (e) {
+  e.preventDefault();
+  let firstname = document.getElementById("firstname").value.trim();
+  let lastname = document.getElementById("lastname").value.trim();
+  let age = document.getElementById("age").value;
+  let gender = document.querySelector('input[name="gender"]:checked');
+  let email = document.getElementById("email").value.trim();
+  let password = document.getElementById("password").value.trim();
+  let confirmpassword = document.getElementById("confirmPassword").value.trim();
+
+  let firstnameerror = document.getElementById("firstnameError");
+  let lastnameerror = document.getElementById("lastnameError");
+  let ageerror = document.getElementById("ageError");
+  let gendererror = document.getElementById("genderError");
+  let emailerror = document.getElementById("emailError");
+  let passworderror = document.getElementById("passwordError");
+  let confirmpassworderror = document.getElementById("confirmpasswordError");
+
+  firstnameerror.textContent = "";
+  lastnameerror.textContent = "";
+  ageerror.textContent = "";
+  gendererror.textContent = "";
+  emailerror.textContent = "";
+  passworderror.textContent = "";
+  confirmpassworderror.textContent = "";
+
+  let isValid = true;
+  if (firstname === "") {
+    firstnameerror.textContent = "This field is empty";
+    isValid = false;
+  }
+  if (lastname === "") {
+    lastnameerror.textContent = "This field is empty";
+    isValid = false;
+  }
+  if (age === "" || age < 18) {
+    ageerror.textContent = "You must be at least 18 years old";
+    isValid = false;
+  }
+  if (gender === null) {
+    gendererror.textContent = "Please select a gender";
+    isValid = false;
+  }
+  if (email === "") {
+    emailerror.textContent = "Enter a valid email (e.g. ram@gmail.com)";
+    isValid = false;
+  }
+  if (password === "") {
+    passworderror.textContent = "This field is empty";
+    isValid = false;
+  } else if (password.length < 6) {
+    passworderror.textContent = "Password must be at least 6 characters";
+    isValid = false;
+  }
+  if (confirmpassword === "") {
+    confirmpassworderror.textContent = "This field is empty";
+    isValid = false;
+  } else if (password !== confirmpassword) {
+    confirmpassworderror.textContent = "Passwords do not match";
+    isValid = false;
+  }
+
+  if (isValid) {
+    let usersArray = JSON.parse(localStorage.getItem("users")) || [];
+
+    usersArray.push({
+      firstname: firstname,
+      lastname: lastname,
+      age: age,
+      gender: gender.value,
+      email: email,
+      password: password,
+    });
+
+    localStorage.setItem("users", JSON.stringify(usersArray));
+
+    console.log(usersArray);
+    alert("Signup Successful!");
+    window.location.href = "Home.html";
+  }
+});
+let up = document.getElementById("up");
+let down = document.getElementById("down");
+let ageinput = document.getElementById("age");
+
+ageinput.value = 18;
+up.addEventListener("click", function () {
+  let currentValue = parseInt(ageinput.value) || 18;
+  ageinput.value = currentValue + 1;
+});
+down.addEventListener("click", function () {
+  let currentValue = parseInt(ageinput.value) || 18;
+  if (currentValue > 18) {
+    ageinput.value = currentValue - 1;
+  }
+});

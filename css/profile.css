@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+.divmainprofile{
+
+    padding: 10px;
+}
+
+
+.profiledetails{
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    align-items: center;
+    margin: 20px;
+    gap: 50px;
+    background: #1a1a1a;
+    padding: 10px;
+    border-radius: 10px;
+}
+.agegender{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: #1a1a1a;
+    margin: 20px;
+    gap: 30px;
+        padding: 10px;
+        color: black;
+            border-radius: 10px;
+
+
+
+}
+.age,.gender{
+    background: black;
+    color: aliceblue;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+        border-radius: 10px;
+
+}
+.divsecondprofile{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background: #1a1a1a;
+    padding: 10px;
+                border-radius: 10px;
+                margin: 20px;
+
+
+
+}
+.divforemail,.divforpassword{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    background: #1a1a1a;
+     padding: 10px;
+                border-radius: 10px;
+}
+#passwordhideandshow{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    width: 150px;
+    cursor: pointer;
+
+}
+
+
+
+
+.detailsofemail,.detailsofpassword{
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+.divsecondprofile h3{
+    padding: 10px;
+}
+.divlastdiv{
+    display: flex;
+   border-radius: 10px;
+                margin: 20px;
+                gap: 10px;
+    
+}
+.divlastdiv button{
+    padding: 15px;
+    width: 100%;
+    border-radius: 10px;
+        border: none;
+
+    
+}
+.logout{
+        background-color: red;
+
+}
+.logout:hover{
+        background-color: rgba(255, 0, 0, 0.482);
+            cursor: pointer;
+
+
+}
+.edit:hover{
+    background-color: rgba(240, 248, 255, 0.635);
+    cursor: pointer;
+    
+}
+
+
+@media (min-width: 768px) {
+    .divmainprofile{
+    margin:50px 150px 30px 150px  ;
+
+    }
+    
+
+
+
+}
+@media (min-width: 1140px) {
+.divmainprofile{
+    margin:50px 300px 30px 300px  ;
+            }
+    
+
+
+
+}

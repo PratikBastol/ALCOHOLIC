@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Drinksy</title>
+        <link rel="stylesheet" href="css/Home.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="css/cart.css">
+
+    </head>
+    <body>
+        <nav class="top-container">
+            <div class="click-btn"><i id="openSidebar"
+                    class="fa-solid fa-bars"></i></div>
+            <div class="logo"><a href="Home.html"><img src="img/logo.png"
+                        alt></a></div>
+            <div class="nav-second">
+                <div class="bigscreennav">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>01-471014</span>
+
+                </div>
+                <div class="search-bar" id="searchingbar">
+
+                    <div class="category-select">
+                        <select id="categorySelect">
+                            <option value="all">All Categories</option>
+                            <option value="beer">Beer</option>
+                            <option value="whisky">Whisky</option>
+                            <option value="wine">Wine</option>
+                        </select>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <input type="text" id="searchInput"
+                        placeholder="Search for products">
+
+                    <div id="searchDropdown" class="search-dropdown"></div>
+
+                </div>
+            </div>
+            <div class="header-right">
+                <i id="searchbtnglass" class="fa-solid fa-magnifying-glass"></i>
+
+                <a href="Cart.html">
+                    <div class="cartimg">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span id="cartcount">0</span>
+                    </div>
+                </a> <span id="navbarUser">Login</span>
+                <button id="logoutBtn" style="display:none;">Logout</button>
+
+            </div>
+
+        </nav>
+        <div id="divbelowsearch" class="divbelowsearch">
+
+            <ul><div class="belowsearchline"></div>
+                <li><a href="Home.html">Home</a> </li>
+                <li><a href="Shop.html">Shop</a></li>
+                <li><a href="flash.html">Flash Sale Item</a></li>
+                <li><a href="Aboutus.html">About Us</a></li>
+                <li><a href="Account.html">My account</a></li>
+                <div class="belowsearchline"></div>
+            </ul>
+
+        </div>
+        <div id="productsContainer"></div>
+        <div id="btn-nav" class="btnsidebar">
+            <div class="sidebarcross">
+                <img src="img/logo.png" alt>
+                <button id="closeSidebar">x</button>
+            </div>
+            <ul>
+                <li><a href="Home.html">Home</a> </li>
+                <li><a href="Shop.html">Shop</a></li>
+                <li><a href="flash.html">Flash Sale Item</a></li>
+                <li><a href="Aboutus.html">About Us</a></li>
+                <li><a href="Account.html">My account</a></li>
+
+            </ul>
+            <hr>
+
+        </div>
+
+        <div class="cart-page">
+
+            <div class="cart-header">
+                <h1>Your Cart <span class="cart-badge" id="cartCountBadge">0
+                        items</span></h1>
+                <p class="cart-subtitle">Review your items before checkout</p>
+            </div>
+
+            <div class="main-cart">
+
+                <div class="cart-items-section">
+
+                    <div class="empty-cart" id="emptyCart">
+                        <i class="fa-solid fa-cart-shopping empty-icon"></i>
+                        <h2>Your cart is empty!</h2>
+                        <p>look like you havent purchase alcohol yet!!</p>
+                        <a href="Shop.html" class="shop-now-btn">Shop Now</a>
+                    </div>
+
+                    <div id="cart"></div>
+
+                </div>
+
+                <div class="checkout-div">
+
+                    <h2 class="summary-title">Order Summary</h2>
+
+                    <div class="summary-line">
+                        <span>Subtotal</span>
+                        <span id="subtotal">Rs 0</span>
+                    </div>
+
+                    <div class="summary-line">
+                        <span>Shipping</span>
+                        <span class="green-text">Cash on Delivery</span>
+                    </div>
+
+                    <div class="summary-line">
+                        <span>Discount</span>
+                        <span class="green-text">None</span>
+                    </div>
+
+                    <div class="summary-divider"></div>
+
+                    <div class="summary-line total-line">
+                        <h3>Total</h3>
+                        <h3 id="grandtotal">Rs 0</h3>
+                    </div>
+
+                    <button class="checkout-btn">
+                        <i class="fa-solid fa-lock"></i>
+                        Proceed to Checkout
+                    </button>
+
+                    <p class="accept">We Accept</p>
+
+                    <div class="visacarddiv">
+                        <i class="fa-brands fa-cc-visa"></i>
+                        <i class="fa-brands fa-cc-mastercard"></i>
+                        <i class="fa-solid fa-credit-card"></i>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <footer class="footer">
+            <div class="footer-1">
+
+                <span>Shop</span>
+                <ul class="footer-links">
+                    <li><a href="#">All Products</a></li>
+                    <li><a href="#">Whiskey</a></li>
+                    <li><a href="#">Wine</a></li>
+                    <li><a href="#">Beer</a></li>
+                    <li><a href="#">Vodka</a></li>
+                    <li><a href="#">Gin</a></li>
+                    <li><a href="#">Rum</a></li>
+                    <li><a href="#">Offers & Deals</a></li>
+                </ul>
+            </div>
+            <hr>
+
+            <div class="footer-2">
+                <span>Customer Service</span>
+                <ul class="footer-links">
+                    <li><a href="#">My Account</a></li>
+                    <li><a href="#">Order Tracking</a></li>
+                    <li><a href="#">Shipping&Delivery</a></li>
+                    <li><a href="#">Returns&Refunds</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <hr>
+            <div class="footer-3">
+                <span>Company</span>
+                <ul class="footer-links">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms&Conditions</a></li>
+                </ul>
+            </div>
+
+        </footer>
+        <hr>
+        <span class="span-last">@2024 Drinksy.All Rights Reserved.</span>
+        <script src="js/navbar.js"></script>
+
+        <script src="js/cart.js"></script>
+
+    </body>
+</html>
