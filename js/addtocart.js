@@ -8,7 +8,6 @@ document.addEventListener("click", function (e) {
     window.location.href = "Account.html";
     return;
   }
-
   let productId = btn.dataset.id;
   let selectedProduct = products.find(function (p) {
     return p.id == productId;
@@ -16,9 +15,8 @@ document.addEventListener("click", function (e) {
   let cartKey = "cart_" + user.email;
   let cart = JSON.parse(localStorage.getItem(cartKey)) || [];
   let existing = cart.find((item) => item.id == productId);
-
   if (existing) {
-    existing.quantity += 1;
+    alert("Item already in cart. You can increase quantity from cart.");
   } else {
     cart.push({
       id: selectedProduct.id,
@@ -27,18 +25,20 @@ document.addEventListener("click", function (e) {
         selectedProduct.price -
         (selectedProduct.discount / 100) * selectedProduct.price,
       image: selectedProduct.image,
+      discount: selectedProduct.discount,
+      category: selectedProduct.category,
+
       quantity: 1,
     });
+    let message = document.getElementById("cartMessage");
+    message.textContent = `${selectedProduct.name} added to cart!`;
+    message.style.display = "block";
+
+    setTimeout(function () {
+      message.style.display = "none";
+    }, 2000);
   }
 
   localStorage.setItem(cartKey, JSON.stringify(cart));
   window.updateCartCount();
-
-  let message = document.getElementById("cartMessage");
-  message.textContent = `${selectedProduct.name} added to cart!`;
-  message.style.display = "block";
-
-  setTimeout(function () {
-    message.style.display = "none";
-  }, 2000);
 });

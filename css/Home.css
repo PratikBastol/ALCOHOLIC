@@ -310,10 +310,13 @@ body {
   font-family: "Poppins", sans-serif;
   cursor: pointer;
   transition: 0.25s ease;
+  margin-right: 10px;
 }
 
 #logoutBtn:hover {
-  color: #ffd700;
+  background-color: rgba(255, 0, 0, 0.784);
+  border-color: white;
+  color: #0a0a0a;
 }
 
 .click-btn {
@@ -493,7 +496,6 @@ body {
 .after-nav::before {
   content: "";
   position: absolute;
-  inset: 0;
   background: linear-gradient(rgba(0, 0, 0, 0.499));
 }
 
@@ -536,10 +538,10 @@ body {
 
   border-radius: 50px;
 }
-.flash-sale h1::after {
+.flash-sale-title::after {
   content: "";
   position: absolute;
-  bottom: -185px;
+  bottom: -160px;
   left: 50%;
   transform: translateX(-50%);
 
@@ -839,6 +841,7 @@ body {
   border-radius: 16px;
   border: 1px solid rgba(255, 255, 255, 0.05);
   display: flex;
+
   flex-direction: column;
   align-items: center;
   gap: 10px;

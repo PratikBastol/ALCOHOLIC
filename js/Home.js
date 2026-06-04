@@ -6,27 +6,20 @@ announcementBar.innerHTML = `
 announcementBar.style.background = "rgba(215, 62, 62, 0.658)";
 announcementBar.style.color = "white";
 announcementBar.style.display = "flex";
-let target = document.querySelector(".flash-sale");
-target.insertAdjacentElement("beforebegin", announcementBar);
 
 //to show product in home page
 
-// let currentpage = 1;
-// let productsperpage = 5;
-let currentIndex = 0;
+let currentpage = 1;
 let productsperpage = 5;
 let leftbtn = document.getElementById("btn-left");
 let rightbtn = document.getElementById("btn-right");
 let showproducts = document.getElementById("productsGrid");
 function renderproducts() {
   showproducts.innerHTML = "";
-  // let start = (currentpage - 1) * productsperpage;
-  // let end = currentpage * productsperpage;
-  // let pageproducts = products.slice(start, end);
-  let pageproducts = products.slice(
-    currentIndex,
-    currentIndex + productsperpage,
-  );
+  let start = (currentpage - 1) * productsperpage;
+  let end = currentpage * productsperpage;
+  let pageproducts = products.slice(start, end);
+
   pageproducts.forEach(function (product) {
     let discount = product.discount || 0;
     let discountedprice = product.price - (product.price * discount) / 100;
@@ -44,31 +37,16 @@ ${discount > 0 ? `<span class="discount-badge">-${discount}%</span>` : ""}
     `;
   });
 }
-// leftbtn.addEventListener("click", function () {
-//   if (currentpage > 1) {
-//     currentpage--;
-//     renderproducts();
-//     showproducts.classList.remove("slide-left");
-//     showproducts.classList.add("slide-right");
-//   }
-// });
-rightbtn.addEventListener("click", function () {
-  if (currentIndex + productsperpage < products.length) {
-    currentIndex++;
+leftbtn.addEventListener("click", function () {
+  if (currentpage > 1) {
+    currentpage--;
     renderproducts();
   }
 });
-// rightbtn.addEventListener("click", function () {
-//   if (currentpage * productsperpage < products.length) {
-//     currentpage++;
-//     renderproducts();
-//     showproducts.classList.remove("slide-right");
-//     showproducts.classList.add("slide-left");
-//   }
-// });
-leftbtn.addEventListener("click", function () {
-  if (currentIndex > 0) {
-    currentIndex--;
+
+rightbtn.addEventListener("click", function () {
+  if (currentpage * productsperpage < products.length) {
+    currentpage++;
     renderproducts();
   }
 });

@@ -48,7 +48,7 @@
   transform: translateX(-50%);
   width: 200px;
   height: 5px;
-  z-index: 100000;
+  z-index: 100;
   background: linear-gradient(to right, transparent, gold, transparent);
   border-radius: 50px;
 }

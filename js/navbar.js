@@ -110,7 +110,6 @@ if (searchinput) {
     }
   });
 }
-
 window.updateCartCount = function () {
   let user = JSON.parse(localStorage.getItem("loggedInUser"));
   if (!loggedInUser) return;
@@ -119,8 +118,8 @@ window.updateCartCount = function () {
   const cart = JSON.parse(localStorage.getItem(cartKey) || []);
   cartcount.textContent = cart.length;
 };
-
 window.updateCartCount();
+
 let lastScrollTop = 0;
 let divbelowsearch = document.getElementById("divbelowsearch");
 

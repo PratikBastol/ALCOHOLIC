@@ -10,25 +10,19 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   let cartKey = "cart_" + user.email;
   let cart = JSON.parse(localStorage.getItem(cartKey)) || [];
-  cart = cart.map(function (item) {
-    if (!item.quantity) item.quantity = 1;
-    return item;
-  });
+
   function saveCart() {
     localStorage.setItem(cartKey, JSON.stringify(cart));
   }
-
   window.renderCartCount = function () {};
   function renderCart() {
     // Update item count badge
     let cartCountBadge = document.getElementById("cartCountBadge");
     let cartcount = document.getElementById("cartcount");
-
-    if (cartCountBadge) {
+    if (cartCountBadge && cartcount) {
       cartCountBadge.textContent = cart.length + " items";
       cartcount.textContent = cart.length;
     }
-
     if (cart.length === 0) {
       emptyCart.style.display = "flex";
       cartContainer.style.display = "none";
@@ -41,13 +35,16 @@ document.addEventListener("DOMContentLoaded", function () {
     let totalPrice = 0;
     cartContainer.innerHTML = cart
       .map(function (item) {
+        let discount = item.discount || 0;
+
         let itemTotal = item.price * item.quantity;
         totalPrice += itemTotal;
         return `
                 <div class="cart-card">
                     <img src="${item.image}" alt="${item.name}">
+          ${discount > 0 ? `<span class="discount-badge">-${discount}%</span>` : ""}
                     <div class="cart-info">                   
-                        <h3>${item.name}</h3>
+                        <h3>${item.name}  (${item.category})</h3>
                         <p>Price: Rs ${item.price}</p>
                         <p>Total: Rs ${itemTotal}</p>
                         <div class="qty-btns">
@@ -64,14 +61,9 @@ document.addEventListener("DOMContentLoaded", function () {
       })
       .join("");
 
-    let shipping = 0;
-    let discount = 0;
-
     totalText.innerText = "Rs " + totalPrice;
-    grandtotal.innerText = "Rs " + (totalPrice + shipping - discount);
+    grandtotal.innerText = "Rs " + totalPrice;
   }
-
-  window.renderCart = renderCart;
 
   //button haru ko lagi
 

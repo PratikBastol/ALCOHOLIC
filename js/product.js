@@ -10,6 +10,15 @@ let products = [
   },
   {
     id: 2,
+    name: "Nepal Ice",
+    price: 300,
+    category: "BEER",
+    image: "img/Beer/nepalice.png",
+    flash: true,
+    discount: 5,
+  },
+  {
+    id: 3,
     name: "Barahsinghe",
     price: 400,
     category: "BEER",
@@ -18,7 +27,7 @@ let products = [
     discount: 0,
   },
   {
-    id: 3,
+    id: 4,
     name: "Budweiser",
     price: 390,
     category: "BEER",
@@ -27,7 +36,7 @@ let products = [
     discount: 0,
   },
   {
-    id: 4,
+    id: 5,
     name: "Carlsberg",
     price: 450,
     category: "BEER",
@@ -36,7 +45,7 @@ let products = [
     discount: 0,
   },
   {
-    id: 5,
+    id: 6,
     name: "Gorkha",
     price: 350,
     category: "BEER",
@@ -45,7 +54,7 @@ let products = [
     discount: 0,
   },
   {
-    id: 6,
+    id: 7,
     name: "Mustang",
     price: 290,
     category: "BEER",
@@ -53,15 +62,7 @@ let products = [
     flash: true,
     discount: 5,
   },
-  {
-    id: 7,
-    name: "Nepal Ice",
-    price: 300,
-    category: "BEER",
-    image: "img/Beer/nepalice.png",
-    flash: true,
-    discount: 5,
-  },
+
   {
     id: 8,
     name: "Tuborg",
