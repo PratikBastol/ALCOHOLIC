@@ -96,6 +96,10 @@ body {
   cursor: pointer;
   color: gold;
 }
+/* #categorySelect option:hover {
+  background-color: #cd2121;
+  color: gold;
+} */
 
 .category-select option {
   background-color: black;
@@ -241,6 +245,9 @@ body {
   padding: 2px 8px;
   border-radius: 20px;
 }
+.dropdown-category:hover {
+  background: rgba(255, 215, 0, 0.25);
+}
 
 .header-right {
   display: flex;
@@ -345,7 +352,8 @@ body {
   transition: all 0.3s ease;
 }
 
-.divbelowsearch a::after {
+.divbelowsearch a::after,
+.divbelowsearch a.active::after {
   content: "";
   position: absolute;
   bottom: 6px;
@@ -358,7 +366,8 @@ body {
   transition: transform 0.25s ease;
 }
 
-.divbelowsearch a:hover::after {
+.divbelowsearch a:hover::after,
+.divbelowsearch a.active::after {
   transform: scaleX(1);
 }
 

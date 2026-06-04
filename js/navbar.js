@@ -134,3 +134,10 @@ window.addEventListener("scroll", function () {
 
   lastScrollTop = currentScroll;
 });
+const navLinks = document.querySelectorAll(".divbelowsearch a");
+
+navLinks.forEach((link) => {
+  if (link.href === window.location.href) {
+    link.classList.add("active");
+  }
+});
