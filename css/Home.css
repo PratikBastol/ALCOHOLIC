@@ -322,7 +322,6 @@ body {
 
 #logoutBtn:hover {
   background-color: rgba(255, 0, 0, 0.784);
-  border-color: white;
   color: #0a0a0a;
 }
 
@@ -501,7 +500,6 @@ body {
   position: relative;
 }
 
-/*herna parney xa yeta */
 .after-nav::before {
   content: "";
   position: absolute;
@@ -509,7 +507,8 @@ body {
 }
 
 .after-nav1 {
-  position: relative;
+  position: sticky;
+  top: 20px;
   z-index: 1;
   max-width: 540px;
   display: flex;
@@ -838,7 +837,7 @@ body {
 
 #productsGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
 }
 

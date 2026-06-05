@@ -10,7 +10,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   let cartKey = "cart_" + user.email;
   let cart = JSON.parse(localStorage.getItem(cartKey)) || [];
-
   function saveCart() {
     localStorage.setItem(cartKey, JSON.stringify(cart));
   }
@@ -60,11 +59,9 @@ document.addEventListener("DOMContentLoaded", function () {
             `;
       })
       .join("");
-
     totalText.innerText = "Rs " + totalPrice;
     grandtotal.innerText = "Rs " + totalPrice;
   }
-
   //button haru ko lagi
 
   cartContainer.addEventListener("click", function (e) {

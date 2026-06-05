@@ -5,7 +5,6 @@ loginform.addEventListener("submit", function (e) {
 
   let email = document.getElementById("email").value.trim();
   let password = document.getElementById("password").value.trim();
-
   let emailerror = document.getElementById("emailError");
   let passworderror = document.getElementById("passwordError");
   let loginerror = document.getElementById("loginError");
@@ -13,9 +12,7 @@ loginform.addEventListener("submit", function (e) {
   emailerror.textContent = "";
   passworderror.textContent = "";
   loginerror.textContent = "";
-
   let isValid = true;
-
   if (email === "") {
     emailerror.textContent = "Email is required";
     isValid = false;
@@ -39,7 +36,6 @@ loginform.addEventListener("submit", function (e) {
 
     console.log(foundUser);
     let successMessage = document.getElementById("LoginsuccessMessage");
-
     if (foundUser) {
       localStorage.setItem("loggedInUser", JSON.stringify(foundUser));
 
